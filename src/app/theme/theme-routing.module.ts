@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ThemeComponent } from './theme.component';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '../auth/_guards/auth.guard';
 
 const routes: Routes = [
@@ -12,6 +12,10 @@ const routes: Routes = [
             {
                 'path': 'index',
                 'loadChildren': '.\/pages\/default\/blank\/blank.module#BlankModule',
+            },
+            {
+                'path': 'dashboard',
+                'loadChildren': '.\/pages\/dashboard\/dashboard.module#DashboardModule',
             },
             {
                 'path': '',

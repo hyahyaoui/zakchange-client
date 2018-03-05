@@ -1,0 +1,110 @@
+<div appunwraptag="" class="m-subheader">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            <h3 class="m-subheader__title">
+                Wallet Dashboard
+            </h3>
+        </div>
+        <div>
+			<span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
+				<span class="m-subheader__daterange-label">
+					<span class="m-subheader__daterange-title">Platform:</span>
+					<span class="m-subheader__daterange-date m--font-brand">Mar 5</span>
+				</span>
+				<a class="btn btn-sm btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill" href="#"
+                   ng-reflect-href="#">
+					<i class="la la-angle-down"></i>
+				</a>
+			</span>
+        </div>
+    </div>
+</div>
+
+<div class="m-content">
+<!--    <div *ngIf="walletLoaded">
+
+        <div class="m-portlet ">
+            <div class="m-portlet__body  m-portlet__body&#45;&#45;no-padding">
+                <div class="row m-row&#45;&#45;no-padding m-row&#45;&#45;col-separator-xl">
+                    <div class="col-md-6 col-lg-4 col-xl-2"  *ngFor="let balance of wallets[selected].balances">
+                        <app-currency-balance-box [balance]="balance"></app-currency-balance-box>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>-->
+    <table id="todatatable" class="row-border hover">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Foo</td>
+            <td>Bar</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Someone</td>
+            <td>Youknow</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Iamout</td>
+            <td>Ofinspiration</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Yoda</td>
+            <td>Skywalker</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Patrick</td>
+            <td>Dupont</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Barack</td>
+            <td>Obama</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>François</td>
+            <td>Holland</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Michel</td>
+            <td>Popo</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Chuck</td>
+            <td>Norris</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Simon</td>
+            <td>Robin</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Louis</td>
+            <td>Lin</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Zelda</td>
+            <td>Link</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

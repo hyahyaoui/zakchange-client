@@ -1,0 +1,59 @@
+<!--<div class="row m-portlet">
+    <div class="col-sm-12">
+
+        <div class="col-sm-8  m&#45;&#45;padding-0 currency-price" *ngIf="balance.ticker">
+            <i *ngIf="diff()<0" class="fa fa-play fa-rotate-90 text-danger"></i>
+            <i *ngIf="diff()>0" class="fa fa-play fa-rotate-270 text-navy"></i>
+            {{ balance.ticker.last | number}} &euro;
+        </div>
+    </div>
+    <div class="col-sm-12 currency-price"
+         style="font-size: 12px; font-weight: 600"
+         [ngClass]="{'text-navy': diff()>0, 'text-danger': diff()<0}"
+         *ngIf="balance.ticker">
+        &lt;!&ndash;
+                <span *ngIf="isValueUp()">+</span>{{(this._balance.ticker.open - this._balance.ticker.last) | number}} &nbsp;
+        &ndash;&gt;
+        <span *ngIf="diff()>0">+</span>{{100*diff()/balance.ticker.open | number}}%
+    </div>
+    <div class="col-sm-5 text-right">
+    </div>
+
+    <div class="col-sm-12">
+        <div>
+            <div class="balance">{{balance.total}}</div>
+            <div style="font-size: 12px;">&asymp; {{balance.total* (balance.ticker && balance.ticker.last) | number}}
+                &euro;
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+    <!--begin::Total Profit-->
+    <div class="m-widget24">
+        <div class="m-widget24__item">
+            <h4 class="m-widget24__title">
+                {{balance.currency.currencyCode}}
+            </h4>
+            <br>
+            <span class="m-widget24__desc">
+													All Customs Value
+												</span>
+            <span class="m-widget24__stats m--font-brand">
+													$18M
+												</span>
+            <div class="m--space-10"></div>
+            <div class="progress m-progress--sm">
+                <div class="progress-bar m--bg-brand" role="progressbar" style="width: 78%;"
+                     aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <span class="m-widget24__change">
+													Change
+												</span>
+            <span class="m-widget24__number">
+													78%
+												</span>
+        </div>
+    </div>
+    <!--end::Total Profit-->
