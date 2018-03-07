@@ -1,0 +1,63 @@
+<div class="balance m-portlet m-portlet--head-sm m-portlet--full-height">
+    <div class="m-portlet__head">
+        <div class="m-portlet__head-caption">
+            <div class="m-portlet__head-title">
+                <h3 class="m-portlet__head-text">
+                    Balance
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div class="m-portlet__body">
+        <div class="m-widget11">
+            <div class="table-responsive">
+                <!--begin::Table-->
+                <table class="table" width="100%">
+                    <!--begin::Thead-->
+                    <thead>
+                    <tr>
+                        <td width="30%">Asset</td>
+                        <td width="35%">Holdings</td>
+                        <td width="35%" class="text-right">Price</td>
+                    </tr>
+                    </thead>
+                    <!--end::Thead-->
+                    <!--begin::Tbody-->
+                    <tbody>
+                    <tr *ngFor="let balance of balances">
+                        <td>
+                            <i class="cc {{balance.currency.currencyCode}}"
+                               title="{{balance.currency.displayName}}" style="font-size: 20px"></i>
+                            {{balance.currency.currencyCode}}
+                        </td>
+
+                        <td>
+                            <span class="m-widget11__title m--font-info">{{balance.available * (balance.ticker && balance.ticker.last) || 0 | number: '0.0-2'}}</span>
+                            <span class="m-widget11__sub">{{balance.available | number:'0.1-4'}}</span>
+                        </td>
+
+                        <td class="m--align-right">
+                   <span class="m-widget11__title">
+                    {{balance.ticker && balance.ticker.last | number :'0.0-4'}}
+                       <i class="la font-size-15 font-weight-600"
+                          [ngClass]="{'price-up la-arrow-up':getTickerSummary(balance.ticker).isPriceUp,
+                     'price-down la-arrow-down':getTickerSummary(balance.ticker).isPriceDown}"></i>
+                   </span>
+                            <span class="m-widget11__sub padding-right-20">
+                       <span [ngClass]="{'price-up':getTickerSummary(balance.ticker).isPriceUp,
+                                        'price-down':getTickerSummary(balance.ticker).isPriceDown}">
+                            <span *ngIf="getTickerSummary(balance.ticker).isPriceUp">+</span>
+                           {{getTickerSummary(balance.ticker).diffIn24h | percent: '0.0-2'}}
+                       </span>
+                    </span>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <!--end::Tbody-->
+                </table>
+                <!--end::Table-->
+            </div>
+        </div>
+    </div>
+</div>
+

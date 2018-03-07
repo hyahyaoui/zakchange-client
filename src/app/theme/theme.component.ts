@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Router, NavigationStart, NavigationEnd } from '@angular/router';
-import { Helpers } from '../helpers';
-import { ScriptLoaderService } from '../_services/script-loader.service';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {NavigationEnd, NavigationStart, Router} from '@angular/router';
+import {Helpers} from '../helpers';
+import {ScriptLoaderService} from '../_services/script-loader.service';
 
 declare let mApp: any;
 declare let mUtil: any;

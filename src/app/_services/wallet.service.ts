@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Wallet } from "../modules/wallet/types/wallet";
-import { RatedWallet } from "../modules/wallet/types/rated.wallet";
-import { CurrencyPair } from "../shared/model/currency.pair";
-import { Ticker } from "../shared/model/ticker";
-import { Http } from "@angular/http";
+import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs';
+import {Wallet} from "../modules/wallet/types/wallet";
+import {RatedWallet} from "../modules/wallet/types/rated.wallet";
+import {CurrencyPair} from "../shared/model/currency.pair";
+import {Ticker} from "../shared/model/ticker";
+import {Http} from "@angular/http";
 
 
 @Injectable()

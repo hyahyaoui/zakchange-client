@@ -19,7 +19,12 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss"
+        "../node_modules/cryptocoins-icons/webfont/cryptocoins.css",
+        "../node_modules/cryptocoins-icons/webfont/cryptocoins-colors.css",
+        "styles.less",
+        "datatbles.less",
+        "menu.less",
+        "portlet.less"
       ],
       "scripts": [
       ],
